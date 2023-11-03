@@ -1,46 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+:root {
+    --circleSize: 15vw;
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: gray; */
+    aspect-ratio: 1/1;
+    height: calc(var(--circleSize));
+    width: calc(var(--circleSize));
+    border-radius: var(--circleSize);
+    /* overflow: hidden; */
+}
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .loader__red-box--light {
     position: absolute;
     aspect-ratio: 1/1;
-    width: 100px;
-    height: auto;
-    background-color: rgba(255, 0, 0, 0.5);
+    width: var(--circleSize);
+    height: var(--circleSize);
+    background-color: rgb(189, 239, 189);
     border-radius: 100px;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 
 .loader__red-box {
     position: absolute;
     aspect-ratio: 1/1;
-    width: 100px;
-    height: auto;
-    background: conic-gradient(red 0deg, transparent 0deg);
+    width: var(--circleSize);
+    height: var(--circleSize);
+    background: conic-gradient(rgb(76, 209, 55) 0deg, transparent 0deg);
+    animation: 1000ms linear rotation infinite;
+    transform-origin: center;
     border-radius: 100px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* animation: 1000ms linear rotation infinite; */
-    transform-origin: left top;
 }
 
 .loader__cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     aspect-ratio: 1/1;
-    width: 90px;
-    height: auto;
+    width: calc(var(--circleSize) - 10px);
+    height: calc(var(--circleSize) - 10px);
     background-color: white;
-    border-radius: 100px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: var(--circleSize);
+    z-index: 10;
+}
+
+.loader .loader__cover p {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 1.5em;
 }
 
 @keyframes rotation {

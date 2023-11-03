@@ -6,12 +6,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="animate()">
+
+    <h1 hidden>Very Cool Website</h1>
+    <p hidden>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fuga cum dolore unde aperiam, accusamus dolorem, ducimus fugiat placeat dolorum nisi optio a cumque vel officia molestias soluta? Accusamus officia numquam odit repellendus nostrum debitis!</p>
+    
     
     <div class="loader">
-        <div class="loader__red-box--light"></div>
-        <div class="loader__red-box"></div>
-        <div class="loader__cover"></div>
+        <div class="container">
+            <div class="loader__red-box--light halo"></div>
+            <div class="loader__red-box--light halo"></div>
+            <div class="loader__red-box--light halo"></div>
+            <div class="loader__red-box--light halo"></div>
+            <div class="loader__red-box--light halo"></div>
+            <div class="loader__red-box--light"></div>
+            <div class="loader__red-box" id="red-box"></div>
+            <div class="loader__cover">
+                <p id="progress"></p>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
