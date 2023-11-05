@@ -1,0 +1,10 @@
+{
+  "name": "2-player-chess",
+  "version": "1.0.0",
+  "description": "a game of chess, visuals made using html css, logic coded using js, backend server made using node js and socket.io",
+  "author": "Energyrole",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "socket.io": "^4.7.2"
+  }
+}
