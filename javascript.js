@@ -7,4 +7,7 @@ socket.on("connect", () => {
     socket.on("host", (data) => {
         document.querySelector("#host").innerHTML = (data.substring(0, 20))
     })
+    socket.on("message", (data) => {
+        document.querySelector("#conversation").innerHTML += (`<p>${data}</p>`)
+    })
 })

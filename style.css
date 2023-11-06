@@ -11,6 +11,14 @@ li {
     justify-content: space-between;
 }
 
+#conversation {
+    border: 2px gray solid;
+    border-radius: 5%;
+    height: 70vh;
+    width: fit-content;
+    padding: 15px;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -23,7 +31,7 @@ body {
 .red-box {
     width: fit-content;
     height: fit-content;
-    background-color: red;
+    /* background-color: red; */
     margin: 10px;
 }
 

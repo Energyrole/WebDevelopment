@@ -31,6 +31,7 @@ io.on("connection", (socket) => {
     } else if (!clients.includes(socket.id)) { //Clients list is not empty, therefore if he doesn't exist already, add him
         clients[clients.length] = socket.id;
         io.except(clients[0]).emit("host", clients[0]);
+        io.except(clients[0]).emit("message", clients[0]);
     } else { //Client already exists in list
         console.log("Client already exists");
     }
