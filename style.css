@@ -14,18 +14,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: gray; */
     aspect-ratio: 1/1;
     height: calc(var(--circleSize));
     width: calc(var(--circleSize));
     border-radius: var(--circleSize);
-    /* overflow: hidden; */
+    overflow: visible;
 }
 
 .loader {
     width: 100vw;
     height: 100vh;
-    /* background-color: green; */
     display: flex;
     justify-content: center;
     align-items: center;
