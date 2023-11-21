@@ -1,4 +1,105 @@
+@font-face {
+    font-family: appleFont;
+    src: url(Fonts/SFPRODISPLAYREGULAR.OTF);
+}
+
 * {
     padding: 0;
     margin: 0;
+    font-family: appleFont;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.calculator {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 9 / 16;
+    height: 100vh;
+    max-width: auto;
+    margin: auto;
+    background-color: black;
+    transform: translateX(-50%);
+}
+
+#number {
+    min-width: 100%;
+    width: 0;
+    scroll-behavior: smooth;
+    outline: none;
+    background-color: transparent;
+    font-size: larger;
+    border: none;
+    pointer-events: none;
+    text-align: end;
+    color: white;
+}
+
+#preview {
+    /* background-color: red; */
+    height: 30%;
+    max-width: 100%;
+    resize: none;
+    background: transparent;
+    color: white;
+    /* direction: rtl; */
+    display: flex;
+    font-size: 50px;
+    margin: 10px;
+    /* flex-direction: row-reverse; */
+    align-items: end;
+}
+
+.input {
+    /* background-color: gray; */
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.button {
+    /* margin: 0 4px; */
+    aspect-ratio: 1/1;
+    height: 18%;
+    background-color: rgb(46, 44, 46);
+    border-radius: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-weight: bold; */
+    font-size: 4vh;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+.button:hover {
+    transition-duration: 200ms;
+    background-color: rgb(105, 102, 104);
+    /* filter: invert(20%); */
+}
+
+.button:nth-child(4n) {
+    background-color: rgb(255, 147, 14);
+}
+
+.button:nth-child(4n):hover {
+    background-color: rgb(255, 218, 165);
+    color: rgb(255, 147, 14);
+}
+
+.button:nth-child(-n+3) {
+    color: black;
+    background-color: rgb(113, 113, 117);
+}
+
+.button:nth-child(-n+3):hover {
+    background-color: rgb(146, 147, 150);
 }
